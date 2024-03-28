@@ -3,6 +3,11 @@
   padding: 0px;
 }
 
+@font-face {
+  font-family: Roboto;
+  src: url('../fonts/Roboto-Medium.ttf');
+}
+
 .container {
   display: grid;
   grid-template: 150px 650px / 250px auto 300px;
@@ -10,8 +15,9 @@
 }
 
 .header {
-  background-color: black;
   grid-area: 1 / 2 / 2 / 4;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
 }
 
 .projects {
@@ -27,4 +33,111 @@
 .announcements {
   background-color: red;
   grid-area: 2 / 3 / 3 / 4;
+}
+
+.search {
+  display: grid;
+  grid-template-columns: 1fr 8fr;
+}
+
+.search-icon {
+  background-image: url('../icons/magnify.svg');
+  margin-right: 5px;
+  height: 30px;
+  width: 30px;
+  background-repeat: no-repeat;
+  justify-self: end;
+}
+
+.search-bar {
+  background-color: #e2e8f0;
+  height: 30px;
+  width: 600px;
+  border-width: 0px;
+  border-radius: 10px;
+}
+
+.top-half {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 2fr 1fr;
+  grid-row: 1 / 2;
+}
+
+.bottom-half {
+  display: grid;
+  grid-template-columns: 100px 1fr 0.2fr 0.2fr 0.2fr;
+  grid-row: 2 / 3;
+  align-items: center;
+
+}
+
+.account-settings {
+  display: grid;
+  grid-template-columns: 3fr 0.5fr 3fr 0.5fr;
+  grid-column: 2 / 3;
+  justify-items: start;
+}
+
+.notifications {
+  height: 30px;
+  width: 30px;
+  background-image: url('../icons/bell-ring-outline.svg');
+  background-repeat: no-repeat;
+  grid-column: 1 / 2;
+  align-self: center;
+  justify-self: end;
+  margin-right: 15px;
+
+}
+
+.profile-picture,
+.profile-picture.large {
+  background-image: url('../icons/dog.png');
+  background-repeat: no-repeat;
+}
+
+.profile-picture {
+  background-size: 60px;
+  height: 60px;
+  width: 60px;
+  grid-column: 2 / 3;
+  margin-left: 5px;
+  margin-right: 15px;
+}
+
+.profile-picture.large {
+  background-size: 100px;
+  height: 100px;
+  width: 100px;
+  grid-column: 1 / 2;
+  margin-left: 40px;
+}
+
+.name {
+  font-family: Roboto;
+  align-self: center;
+}
+
+.greeting {
+  font-family: Roboto;
+  margin-left: 50px;
+}
+
+.hello {
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.account-name {
+  font-size: 18px;
+}
+
+.bottom-half button {
+  width: 100px;
+  height: 40px;
+  border-radius: 25px;
+  background-color: #60a5fa;
+  color: white;
+  border-width: 0px;
 }
